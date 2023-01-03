@@ -40,6 +40,11 @@ $row++
 $sheet++
 }
 $output = $path + "\" + $outputfilename
-$xlsx.SaveAs($output)
+Write-Host $output
+$excelapp.DisplayAlerts = $false
+# $xlsx.SaveAs("C:\Users\gustavonunes\Desktop\programs\powershell\Mesclar csv\result\test.xlsx")
+$xlsx.SaveAs(".\20230103_combined-data.xlsx")
 $excelapp.quit()
-cd \ #returns to drive root
+cd ..
+
+Pause
